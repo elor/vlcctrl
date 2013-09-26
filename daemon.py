@@ -10,7 +10,7 @@ def handleInput(line, control):
 
 def daemon(pipe):
 	DEVNULL=open(os.devnull, 'wb')
-	vlc = subprocess.Popen(['vlc', '-I', 'rc'], stdin=subprocess.PIPE, stdout=DEVNULL, stderr=DEVNULL)
+	vlc = subprocess.Popen(['vlc', '-I', 'rc', '--extraintf', 'http'], stdin=subprocess.PIPE, stdout=DEVNULL, stderr=DEVNULL)
 
 	pipe = open(pipe, 'r')
 
